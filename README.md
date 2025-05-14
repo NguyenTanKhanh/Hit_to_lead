@@ -25,5 +25,9 @@ conda activate hit2lead
 
 I build based the DrugEx and Vina for optimze hit2lead process. 
 
+Ref: 
+1. https://github.com/CDDLeiden/DrugEx
+2. https://github.com/yboulaamane/VinaScreen/tree/main
+
 
 
