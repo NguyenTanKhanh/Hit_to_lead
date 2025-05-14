@@ -1,10 +1,13 @@
 # Hit2Lead_K_test
  
 This is process to optimize hit to lead by intergated DrugEx and Vina
-Step 0: run "!drugex download" to download the dataset for training model
+
 Step 1: Run 1.run_training.sh to train the generation model
+
 Step 2: Run 2.run_lead_generation.sh to create new molecules containing scaffold
+
 Step 2.1: Run python generate_molecule_image.py to see image of generation_compound
+
 Step 3: Run 3.run_vinascreen.sh to dock list compounds to target protein
 
 
