@@ -15,7 +15,7 @@ Step 3: Run 3.run_vinascreen.sh to dock list compounds to target protein
 
 
 ```bash
-git clone git@github.com:NguyenTanKhanh/Hit_to_lead.git
+git clone https://github.com/NguyenTanKhanh/Hit_to_lead.git
 cd Hit_to_lead
 conda env create -f env.yml
 conda activate hit2lead
