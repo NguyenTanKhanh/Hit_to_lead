@@ -1,27 +1,0 @@
-python -m drugex.dataset -b data_papyrus05.5 -i Papyrus05.5_ALL.smi -o Papyrus05.5 -mt graph -np 20 -mc Smiles
-{
-  "base_dir": ".",
-  "debug": false,
-  "input": "Papyrus05.5_ALL.smi",
-  "output": "Papyrus05.5.smi",
-  "mol_type": "graph",
-  "smiles_corpus": false,
-  "no_fragmentation": false,
-  "frag_method": "brics",
-  "n_frags": 4,
-  "n_combs": 4,
-  "n_proc": 20,
-  "molecule_column": "Smiles",
-  "save_voc": false,
-  "voc_file": null,
-  "save_intermediate_files": false,
-  "no_fragment_split": false,
-  "no_git": false
-}
-Dataset started. Loading molecules...
-Loading molecules...
-Standardizing molecules...
-Standardizing molecules (batch processing):   0%|          | 0/16 [00:00<?, ?it/s]Standardizing molecules (batch processing):   6%|▋         | 1/16 [00:09<02:19,  9.29s/it]Standardizing molecules (batch processing):  12%|█▎        | 2/16 [00:18<02:07,  9.13s/it]Standardizing molecules (batch processing):  19%|█▉        | 3/16 [00:27<01:58,  9.11s/it]Standardizing molecules (batch processing):  25%|██▌       | 4/16 [00:36<01:49,  9.11s/it]Standardizing molecules (batch processing):  31%|███▏      | 5/16 [00:45<01:39,  9.09s/it]Standardizing molecules (batch processing):  38%|███▊      | 6/16 [00:54<01:31,  9.10s/it]Standardizing molecules (batch processing):  44%|████▍     | 7/16 [01:03<01:21,  9.09s/it]Standardizing molecules (batch processing):  50%|█████     | 8/16 [01:12<01:12,  9.08s/it]Standardizing molecules (batch processing):  56%|█████▋    | 9/16 [01:21<01:03,  9.08s/it]Standardizing molecules (batch processing):  62%|██████▎   | 10/16 [01:30<00:54,  9.08s/it]Standardizing molecules (batch processing):  69%|██████▉   | 11/16 [01:39<00:45,  9.06s/it]Standardizing molecules (batch processing):  75%|███████▌  | 12/16 [01:49<00:36,  9.06s/it]Standardizing molecules (batch processing):  81%|████████▏ | 13/16 [01:58<00:27,  9.06s/it]Standardizing molecules (batch processing):  88%|████████▊ | 14/16 [02:07<00:18,  9.07s/it]Standardizing molecules (batch processing):  94%|█████████▍| 15/16 [02:16<00:09,  9.09s/it]Standardizing molecules (batch processing): 100%|██████████| 16/16 [02:25<00:00,  9.06s/it]Standardizing molecules (batch processing): 100%|██████████| 16/16 [02:25<00:00,  9.08s/it]
-Breaking molecules to leaf fragments, making combinations and encoding...Creating fragment-molecule pairs (batch processing):   0%|          | 0/1 [00:00<?, ?it/s]Creating fragment-molecule pairs (batch processing): 100%|██████████| 1/1 [12:38<00:00, 758.35s/it]Creating fragment-molecule pairs (batch processing): 100%|██████████| 1/1 [12:38<00:00, 758.35s/it]
-To speed up the training, the test set size was automatically capped at 10000.0 fragments instead of the default 10% of original data, which would have been: 121386.Encoding fragment-molecule pairs. (batch processing):   0%|          | 0/1 [00:00<?, ?it/s]Encoding fragment-molecule pairs. (batch processing): 100%|██████████| 1/1 [00:15<00:00, 15.04s/it]Encoding fragment-molecule pairs. (batch processing): 100%|██████████| 1/1 [00:15<00:00, 15.04s/it]Encoding fragment-molecule pairs. (batch processing):   0%|          | 0/1 [00:00<?, ?it/s]Encoding fragment-molecule pairs. (batch processing): 100%|██████████| 1/1 [45:24<00:00, 2724.04s/it]Encoding fragment-molecule pairs. (batch processing): 100%|██████████| 1/1 [45:24<00:00, 2724.04s/it]Encoding fragment-molecule pairs. (batch processing):   0%|          | 0/1 [00:00<?, ?it/s]Encoding fragment-molecule pairs. (batch processing): 100%|██████████| 1/1 [05:40<00:00, 340.85s/it]Encoding fragment-molecule pairs. (batch processing): 100%|██████████| 1/1 [05:40<00:00, 340.85s/it]
-Dataset finished. Execution time: 4015.4743 seconds
