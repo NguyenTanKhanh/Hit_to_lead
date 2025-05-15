@@ -9,9 +9,9 @@ OUTPUT_DIR="lead_generation_output"
 python lead_generation.py \
   --pkg training_graph/scaffolds.pkg \
   --frags \
-    "NC1=NN(C(=O)C1)C1=CC(C2=NNN=N2)=C(OC2=CC=CC=C2)C=C1" \
-    "CCNC(=O)[N-]S(=O)(=O)C1=CC(=CC=C1OC1=CC=CC=C1)N1N=C(N)CC1=O" \
-    "NC1=NN(C(=O)C1)C1=CC=C(OC2=CC=CC=C2)C(=C1)C1=N[N-]N=N1" \
+    "NC1=NN(C(=O)C1)C1" \
+    "CCNC" \
+    "NC1=NN" \
   --num_samples 1000 \
   --output_dir "$OUTPUT_DIR" \
   --gpu 0 \
