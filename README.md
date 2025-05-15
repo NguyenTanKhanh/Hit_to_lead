@@ -21,6 +21,9 @@ conda env create -f env.yml
 conda activate hit2lead
 ```
 
+### Checking
+which obebabel 
+
 ### Hardware Requirements
 
 I build based the DrugEx and Vina for optimze hit2lead process. 
