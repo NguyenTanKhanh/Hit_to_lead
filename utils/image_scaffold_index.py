@@ -1,9 +1,4 @@
 #!/usr/bin/env python3
-"""
-draw_smiles.py
-
-Draw a SMILES string with heavy‐atom indices, save to PNG.
-"""
 
 import argparse
 import io
