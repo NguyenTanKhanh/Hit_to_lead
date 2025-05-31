@@ -1,6 +1,6 @@
 # Hit-to-Lead Optimization Pipeline
 
-This project integrates **DrugEx** and **AutoDock Vina** into a streamlined pipeline for hit-to-lead optimization. It supports scaffold-based molecule generation with fragment attachment, and virtual screening via molecular docking.
+This tool integrates **DrugEx** and **AutoDock Vina** into a streamlined pipeline for hit-to-lead optimization. It supports scaffold-based molecule generation with fragment attachment, and virtual screening via molecular docking.
 
 ---
 ![github_hit2lead](https://github.com/user-attachments/assets/52eb5392-fc83-438f-86c7-725a56b0f635)
