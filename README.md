@@ -89,6 +89,13 @@ bash run_generate_molecule_image.sh
 
 ---
 
+###  Limitation 
+
+This method uses an iodine (I) atom to temporarily block specific atoms in the scaffold during molecule growth. After generation, the iodine atoms are replaced back with hydrogen.
+If your original scaffold already contains iodine atoms or if you intend to grow molecules that include iodine, this method will not work correctly.
+
+---
+
 ## 📚 References
 
 - [DrugEx – CDD Leiden](https://github.com/CDDLeiden/DrugEx)
