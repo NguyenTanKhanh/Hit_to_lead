@@ -1,36 +1,103 @@
-# Hit2Lead_K_test
- 
-This is process to optimize hit to lead by intergated DrugEx and Vina
+# Hit-to-Lead Optimization Pipeline
 
-Step 1: Run 1.run_training.sh to train the generation model
+This project integrates **DrugEx** and **AutoDock Vina** into a streamlined pipeline for hit-to-lead optimization. It supports scaffold-based molecule generation with fragment attachment, and virtual screening via molecular docking.
 
-Step 2: Run 2.run_lead_generation.sh to create new molecules containing scaffold
+---
 
-Step 2.1: Run python generate_molecule_image.py to see image of generation_compound
+## 🔧 Installation
 
-Step 3: Run 3.run_vinascreen.sh to dock list compounds to target protein
-
-
-## Installation
-
+Make sure you have [Conda](https://docs.conda.io/en/latest/) installed. Then follow these steps:
 
 ```bash
 git clone https://github.com/NguyenTanKhanh/Hit_to_lead.git
 cd Hit_to_lead
-conda env create -f env.yml
-conda activate hit2lead
+
+# Create and activate a new Conda environment
+conda create -n Hit_to_lead python=3.11
+conda activate Hit_to_lead
+
+# Install DrugEx and ChemProp
+pip install git+https://github.com/CDDLeiden/DrugEx.git@master
+pip install chemprop
+
+# Install cheminformatics and scientific libraries
+conda install -c conda-forge rdkit pandas numpy matplotlib scikit-learn
 ```
 
-### Checking
-which obebabel 
+---
 
-### Hardware Requirements
+## 🚀 Pipeline Overview
 
-I build based the DrugEx and Vina for optimze hit2lead process. 
+### 1. Fragment Preparation
 
-Ref: 
-1. https://github.com/CDDLeiden/DrugEx
-2. https://github.com/yboulaamane/VinaScreen/tree/main
+Generate dummy molecules from fragment combinations using DrugEx.
 
+```bash
+bash run_training.sh
+```
+
+---
+
+### 2. Scaffold Preparation
+
+Prepare a scaffold in SMILES format, visualize indexed atoms, and define attachment constraints.
+
+```bash
+bash run_scaffold_molecule_index.sh
+```
+
+After identifying atoms to block, apply the modification:
+
+```bash
+bash run_block_atom.sh
+```
+
+
+---
+
+### 3. Molecule Generation from Scaffold
+
+Use the modified scaffold to grow lead-like molecules:
+
+```bash
+bash run_lead_generation.sh
+```
+
+
+---
+
+### 4. Molecular Docking with AutoDock Vina
+
+Dock generated molecules against your target protein:
+
+```bash
+bash run_vinascreen.sh
+```
+
+---
+
+### 🧪 Optional: Molecule Visualization
+
+To visualize generated molecules as 2D images:
+
+```bash
+bash run_generate_molecule_image.sh
+```
+
+---
+
+## 📚 References
+
+- [DrugEx – CDD Leiden](https://github.com/CDDLeiden/DrugEx)
+- [VinaScreen – Yassir Boulaamane](https://github.com/yboulaamane/VinaScreen/tree/main)
+
+---
+
+## ⚖️ License
+
+**This project has no formal license. It is provided freely for educational, academic, and non-commercial use.**  
+Feel free to use, modify, and share this repository at your own discretion.
+
+> ⚠️ Note: If you build upon this for publication or product development, please consider citing the original tools (DrugEx, Vina) and this repository if relevant.
 
 
