@@ -21,7 +21,8 @@ conda activate Hit_to_lead
 
 # Install DrugEx and ChemProp
 pip install git+https://github.com/CDDLeiden/DrugEx.git@master
-pip install chemprop
+pip install chemprop==2.1.0
+
 
 # Install cheminformatics and scientific libraries
 conda install -c conda-forge rdkit pandas numpy matplotlib scikit-learn
