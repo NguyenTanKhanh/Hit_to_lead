@@ -19,13 +19,18 @@ cd Hit_to_lead
 conda create -n Hit_to_lead python=3.11
 conda activate Hit_to_lead
 
-# Install DrugEx and ChemProp
+# Install RDKit and scientific libraries first (important for compatibility)
+conda install -c conda-forge rdkit pandas numpy matplotlib scikit-learn -y
+
+# Install DrugEx (latest from GitHub master)
 pip install git+https://github.com/CDDLeiden/DrugEx.git@master
+
+# Install Chemprop version 2.1.0 (requires Python >=3.11)
 pip install chemprop==2.1.0
 
 
-# Install cheminformatics and scientific libraries
-conda install -c conda-forge rdkit pandas numpy matplotlib scikit-learn
+
+
 ```
 
 ---
