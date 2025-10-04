@@ -1,11 +1,9 @@
 # Hit-to-Lead Optimization Pipeline
 
-This tool integrates **DrugEx** and **AutoDock Vina** into a streamlined pipeline for hit-to-lead optimization. It supports scaffold-based molecule generation with fragment attachment, and virtual screening via molecular docking.
+This project integrates **DrugEx** and **AutoDock Vina** into a streamlined pipeline for hit-to-lead optimization.  
+It supports **scaffold-based molecule generation with fragment attachment** and **virtual screening via molecular docking**.
 
 ---
-![github_hit2lead](https://github.com/user-attachments/assets/52eb5392-fc83-438f-86c7-725a56b0f635)
-
-
 
 ## 🔧 Installation
 
@@ -19,17 +17,12 @@ cd Hit_to_lead
 conda create -n Hit_to_lead python=3.11
 conda activate Hit_to_lead
 
-
-# Install DrugEx (latest from GitHub master)
+# Install DrugEx and ChemProp
 pip install git+https://github.com/CDDLeiden/DrugEx.git@master
+pip install chemprop
 
-# Install Chemprop version 2.1.0 (requires Python >=3.11)
-pip install chemprop==2.1.0
-
-# Install openbabel
-conda install -c conda-forge openbabel
-
-
+# Install cheminformatics and scientific libraries
+conda install -c conda-forge rdkit pandas numpy matplotlib scikit-learn openbabel
 ```
 
 ---
@@ -38,7 +31,7 @@ conda install -c conda-forge openbabel
 
 ### 1. Fragment Preparation
 
-Generate dummy molecules from fragment combinations using DrugEx.
+Generate dummy molecules from fragment combinations using **DrugEx**.
 
 ```bash
 bash run_training.sh
@@ -48,18 +41,17 @@ bash run_training.sh
 
 ### 2. Scaffold Preparation
 
-Prepare a scaffold in SMILES format, visualize indexed atoms, and define attachment constraints.
+Prepare a scaffold in **SMILES** format, visualize atom indices, and define attachment constraints.
 
 ```bash
 bash run_scaffold_molecule_index.sh
 ```
 
-After identifying atoms to block, apply the modification:
+After identifying atoms to block, apply modifications:
 
 ```bash
 bash run_block_atom.sh
 ```
-
 
 ---
 
@@ -71,10 +63,48 @@ Use the modified scaffold to grow lead-like molecules:
 bash run_lead_generation.sh
 ```
 
+---
+
+### 4. PAINS + BRENK filtering 
+
+Filter molecules like PAINS and BRENK using Rdkit
+
+```bash
+bash run_pains_brenk.sh
+```
+---
+### 5. Property-Based Filtering *(optional)*
+
+Filter molecules by predicted properties (e.g., **cell membrane and Golgi permeability**) to increase the chance of successful intracellular transport:
+
+```bash
+bash run_filter_pH_7.4.sh
+bash run_filter_pH_6.3.sh
+```
 
 ---
 
-### 4. Molecular Docking with AutoDock Vina
+### 6. pKa-Based Filtering *(optional)*
+
+Filter molecules by predicted properties (e.g., **cell membrane and Golgi permeability**) to increase the chance of successful intracellular transport:
+
+```bash
+bash run_pKa.sh
+```
+
+---
+
+### 7. Activity-Based Filtering *(optional)*
+
+Predict compound activity against the target protein:
+
+```bash
+bash run_predict_activity.sh
+```
+
+---
+
+### 8. Molecular Docking with AutoDock Vina *(optional)*
 
 Dock generated molecules against your target protein:
 
@@ -84,9 +114,9 @@ bash run_vinascreen.sh
 
 ---
 
-### 🧪 Optional: Molecule Visualization
+### 9. Molecule Visualization *(optional)*
 
-To visualize generated molecules as 2D images:
+Visualize generated molecules as 2D images:
 
 ```bash
 bash run_generate_molecule_image.sh
@@ -94,25 +124,16 @@ bash run_generate_molecule_image.sh
 
 ---
 
-###  Limitation 
-
-This method uses an iodine (I) atom to temporarily block specific atoms in the scaffold during molecule growth. After generation, the iodine atoms are replaced back with hydrogen.
-If your original scaffold already contains iodine atoms or if you intend to grow molecules that include iodine, this method will not work correctly.
-
----
-
 ## 📚 References
 
-- [DrugEx – CDD Leiden](https://github.com/CDDLeiden/DrugEx)
-- [VinaScreen – Yassir Boulaamane](https://github.com/yboulaamane/VinaScreen/tree/main)
-
+- [DrugEx – CDD Leiden](https://github.com/CDDLeiden/DrugEx)  
+- [VinaScreen – Yassir Boulaamane](https://github.com/yboulaamane/VinaScreen/tree/main)  
+- [Chemprop-Esther Heid](https://github.com/chemprop/chemprop)
 ---
 
 ## ⚖️ License
 
-**This project has no formal license. It is provided freely for educational, academic, and non-commercial use.**  
-Feel free to use, modify, and share this repository at your own discretion.
+This project has **no formal license** and is provided freely for **educational, academic, and non-commercial use**.  
+Feel free to use, modify, and share this repository.
 
-> ⚠️ Note: If you build upon this for publication or product development, please consider citing the original tools (DrugEx, Vina) and this repository if relevant.
-
-
+> ⚠️ Note: If you use this workflow for publication or product development, please consider citing the original papers ....
