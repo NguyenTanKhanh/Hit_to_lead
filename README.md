@@ -67,7 +67,7 @@ bash run_lead_generation.sh
 
 ---
 
-### 4. PAINS + BRENK filtering 
+### 4. PAINS + BRENK filtering *(optional)*
 
 Filter molecules like PAINS and BRENK using Rdkit
 
