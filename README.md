@@ -3,7 +3,7 @@
 Hello, I am Khanh :))
 
 This project aims to integrate DrugEx with a new feature that preserves key hydrogen atoms, and to combine it with Chemprop and AutoDock Vina into a unified, streamlined pipeline for hit-to-lead optimization.
-It supports **scaffold-based molecule generation with fragment attachment** and **virtual screening via molecular docking**.
+It supports **scaffold-based molecule generation** and **virtual screening via molecular docking**.
 
 ---
 
