@@ -138,7 +138,5 @@ bash run_generate_molecule_image.sh
 
 ## ⚖️ License
 
-This project has **no formal license** and is provided freely for **educational, academic, and non-commercial use**.  
-Feel free to use, modify, and share this repository.
 
 > ⚠️ Note: If you use this workflow for publication or product development, please consider citing the original papers ....
