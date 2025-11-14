@@ -1,9 +1,7 @@
 # Hit-to-Lead Optimization Pipeline
 
-Hello, I am Khanh, a very handsome boy :)) 🇻🇳 Việt Nam
-
 Hello, I am Khanh, a very handsome boy :)) 
-<img src="https://flagcdn.com/w20/vn.png" width="20">
+<img src="https://flagcdn.com/w20/vn.png" width="20"><img src="https://flagcdn.com/w20/vn.png" width="20"><img src="https://flagcdn.com/w20/vn.png" width="20">
 
 
 
