@@ -105,17 +105,9 @@ bash run_predict_activity.sh
 
 ---
 
-### 8. Molecular Docking with AutoDock Vina *(optional)*
-
-Dock generated molecules against your target protein:
-
-```bash
-bash run_vinascreen.sh
-```
-
 ---
 
-### 9. Molecule Visualization *(optional)*
+### Molecule Visualization *(optional)*
 
 Visualize generated molecules as 2D images:
 
@@ -128,7 +120,6 @@ bash run_generate_molecule_image.sh
 ## 📚 References
 
 - [DrugEx – CDD Leiden](https://github.com/CDDLeiden/DrugEx)  
-- [VinaScreen – Yassir Boulaamane](https://github.com/yboulaamane/VinaScreen/tree/main)  
 - [Chemprop-Esther Heid](https://github.com/chemprop/chemprop)
 ---
 
