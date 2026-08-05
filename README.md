@@ -1,9 +1,5 @@
 # Hit-to-Lead Optimization Pipeline
 
-Hello, I am Khanh, a very handsome boy :)) 
-<img src="https://flagcdn.com/w20/vn.png" width="20"> <img src="https://flagcdn.com/w20/vn.png" width="20"> <img src="https://flagcdn.com/w20/vn.png" width="20">
-
-
 
 This project aims to integrate DrugEx with a new feature that preserves key hydrogen atoms, and to combine it with Chemprop and AutoDock Vina into a unified, streamlined pipeline for hit-to-lead optimization.
 It supports **scaffold-based molecule generation** and **virtual screening via molecular docking**.
